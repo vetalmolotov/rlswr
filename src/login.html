@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&display=swap" rel="stylesheet">
+
+    <title><%= htmlWebpackPlugin.options.title %></title>
+  </head>
+
+  <body>
+    <div id="root" class="app">
+
+      <div class="app-wrapper app-login">
+
+        <div class="app-banner app-login-banner"></div>
+        <h1 class="app-heading"></h1>
+        <section class="app-form">
+          <label class="app-form-email">
+            <input class="app-form-input" type="text" placeholder="your email" />
+            <i class="app-form-icon"></i>
+          </label>
+          <label class="app-form-password">
+            <input class="app-form-input" type="password" placeholder="password" />
+            <i class="app-form-icon"></i>
+          </label>
+          <p>
+            <a href="forgot-password.html">Forgot Password?</a>
+          </p>
+          <button type="submit" class="primary">log in</button>
+          <div class="app-form-additional">
+            Or connect with social
+          </div>
+        </section>
+        <footer class="app-footer">
+          <a href="#" class="link-button link-button-facebook">Facebook</a>
+          <a href="#" class="link-button link-button-google">Google</a>
+        </footer>
+
+      </div>
+
+    </div>
+  </body>
+</html>

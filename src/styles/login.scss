@@ -1,0 +1,16 @@
+.app-login {
+  padding-top: 29px;
+  &-banner {
+    background: url("../images/login-illustration.png") 0 0 no-repeat;
+    background-size: cover;
+  }
+  .app-form {
+    p {
+      justify-content: right;
+    }
+  }
+  .app-footer {
+    display: flex;
+    justify-content: space-between;
+  }
+}

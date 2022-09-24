@@ -1,25 +1,68 @@
+@import "reset.css";
+@import "mixins";
 html {
   font-size: $font-size;
   font-family: $font-family;
   background: $background-color;
   color: $font-color;
-  line-height: 1.4;
 }
 
-body {
-  margin: auto;
-  text-align: center;
-  max-width: $page-width;
-}
 
 h1 {
-  margin: 0 0 2rem;
+  @include flex-vh;
+  font-size: 36px;
+  font-weight: 700;
+  color: #000000;
+  height: 42px;
+  margin: 0 0 36px;
+}
+p {
+  margin: 0;
+}
+a {
+  font-size: 16px;
+  font-weight: 400;
+  color: $link-color;
+  text-decoration: none;
+  &:hover {
+    text-decoration: underline;
+  }
 }
 
-.image {
-  display: inline-block;
-  height: 100px;
-  width: 100px;
-  background-image: url('~assets/example.png');
-  background-size: cover;
+
+button {
+  @include flex-vh;
+  height: 50px;
+  font-size: 16px;
+  font-weight: 400;
+  text-transform: capitalize;
+  border-radius: $button-border-radius;
+  cursor: pointer;
+  &.primary {
+    color: $button-primary-color;
+    background: $button-primary-bg;
+  }
+}
+input {
+  display: flex;
+  align-items: center;
+  height: 50px;
+  padding: 0 23px 0 46px;
+  color: $input-font-color;
+  font-size: 16px;
+  font-weight: 400;
+  border: 1px solid $input-border;
+  border-radius: $input-border-radius;
+  &:focus {
+    color: $input-active-color;
+    border: 1px solid $input-active-color;
+    & + .app-form-icon svg path {
+      fill: $input-active-color;
+      color: $input-active-color;
+    }
+  }
+  & + .app-form-icon svg path {
+    fill: $input-font-color;
+    color: $input-font-color;
+  }
 }
